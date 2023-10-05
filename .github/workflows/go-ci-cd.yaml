@@ -26,7 +26,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # Use the secret you added for your SSH private key
       run: |
         # Transfer the binary to your EC2 instance using SCP or any other method
-        scp -i C:\Users\a837365\Downloads\web-app.pem app ec2-user@3.89.221.142:/home/ec2-user/my-app
+        scp -i "C:\Users\a837365\Downloads\web-app.pem" app ec2-user@3.89.221.142:/home/ec2-user/my-app
         
         # Connect to your EC2 instance and restart your Go application
-        ssh -i C:\Users\a837365\Downloads\web-app.pem ec2-user@3.89.221.142 "cd 3.89.221.142 && ./appi"
+        ssh -i "C:\Users\a837365\Downloads\web-app.pem" ec2-user@3.89.221.142 "cd 3.89.221.142 && ./appi"
